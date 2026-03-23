@@ -198,6 +198,7 @@ const localizedMaps = {
       CORE: "核心",
       EXPERT1: "经典",
       LEGACY: "传承",
+      CATACLYSM: "浩劫与重生",
       WHIZBANGS_WORKSHOP: "威兹班的工坊",
       ISLAND_VACATION: "胜地历险记",
       SPACE: "深暗领域",
@@ -213,7 +214,7 @@ const localizedMaps = {
     school: { ARCANE: "Arcane", FEL: "Fel", FIRE: "Fire", FROST: "Frost", HOLY: "Holy", NATURE: "Nature", SHADOW: "Shadow" },
     tribe: { BEAST: "Beast", DEMON: "Demon", DRAGON: "Dragon", DRAENEI: "Draenei", ELEMENTAL: "Elemental", MECH: "Mech", MURLOC: "Murloc", NAGA: "Naga", PIRATE: "Pirate", QUILBOAR: "Quilboar", TOTEM: "Totem", UNDEAD: "Undead", ZERG: "Zerg" },
     keyword: { AURA: "Aura", BATTLECRY: "Battlecry", CHARGE: "Charge", COLOSSAL: "Colossal", DEATHRATTLE: "Deathrattle", DISCOVER: "Discover", DIVINE_SHIELD: "Divine Shield", DREDGE: "Dredge", ECHO: "Echo", FORGE: "Forge", FREEZE: "Freeze", FRENZY: "Frenzy", INFUSE: "Infuse", LIFESTEAL: "Lifesteal", MEGA_WINDFURY: "Mega-Windfury", OUTCAST: "Outcast", OVERLOAD: "Overload", POISONOUS: "Poisonous", QUEST: "Quest", QUESTLINE: "Questline", REBORN: "Reborn", RUSH: "Rush", SECRET: "Secret", SPELLPOWER: "Spell Damage", STEALTH: "Stealth", TAUNT: "Taunt", TITAN: "Titan", WINDFURY: "Windfury" },
-    expansion: { CORE: "Core", EXPERT1: "Classic", LEGACY: "Legacy", WHIZBANGS_WORKSHOP: "Whizbang's Workshop", ISLAND_VACATION: "Perils in Paradise", SPACE: "The Great Dark Beyond", EMERALD_DREAM: "Into the Emerald Dream", THE_LOST_CITY: "The Lost City of Un'Goro", TIME_TRAVEL: "Across the Timeways" }
+    expansion: { CORE: "Core", EXPERT1: "Classic", LEGACY: "Legacy", CATACLYSM: "Cataclysm", WHIZBANGS_WORKSHOP: "Whizbang's Workshop", ISLAND_VACATION: "Perils in Paradise", SPACE: "The Great Dark Beyond", EMERALD_DREAM: "Into the Emerald Dream", THE_LOST_CITY: "The Lost City of Un'Goro", TIME_TRAVEL: "Across the Timeways" }
   }
 };
 

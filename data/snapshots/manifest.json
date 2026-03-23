@@ -1,6 +1,17 @@
 {
-  "defaultSnapshot": "2026_pre_expansion",
+  "defaultSnapshot": "2026_year_of_the_beetle",
   "snapshots": [
+    {
+      "key": "2026_year_of_the_beetle",
+      "label": "2026 甲虫年 · 浩劫与重生上线",
+      "labelEn": "Year of the Beetle · Cataclysm Launch",
+      "description": "甲虫年标准快照：移除威兹班的工坊、胜地历险记、深暗领域，加入浩劫与重生。",
+      "descriptionEn": "Year of the Beetle Standard snapshot: rotates out Whizbang's Workshop, Perils in Paradise, and The Great Dark Beyond; adds Cataclysm.",
+      "generatedAt": "2026-03-19",
+      "cardsPath": "./data/snapshots/2026_year_of_the_beetle/cards.json",
+      "cardsPathEn": "./data/snapshots/2026_year_of_the_beetle/cards.enUS.json",
+      "difficultyDocPath": "./docs/difficulty_v2.md"
+    },
     {
       "key": "2026_pre_expansion",
       "label": "2026 拓展包上线前",
