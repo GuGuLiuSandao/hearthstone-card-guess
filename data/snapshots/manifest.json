@@ -1,0 +1,16 @@
+{
+  "defaultSnapshot": "2026_pre_expansion",
+  "snapshots": [
+    {
+      "key": "2026_pre_expansion",
+      "label": "2026 拓展包上线前",
+      "labelEn": "Pre-expansion 2026 Standard",
+      "description": "当前成品快照，包含 2026 首个新拓展包上线前的标准环境。",
+      "descriptionEn": "Current playable snapshot before the first 2026 expansion and rotation update.",
+      "generatedAt": "2026-03-13",
+      "cardsPath": "./data/snapshots/2026_pre_expansion/cards.json",
+      "cardsPathEn": "./data/snapshots/2026_pre_expansion/cards.enUS.json",
+      "difficultyDocPath": "./docs/difficulty_v2.md"
+    }
+  ]
+}

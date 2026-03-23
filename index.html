@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>炉石猜卡</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Source+Sans+3:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <main class="panel">
+        <header class="hero">
+          <div class="topbar">
+            <div></div>
+            <select id="locale-select" class="locale-select" aria-label="Language">
+              <option value="zh">中文</option>
+              <option value="en">English</option>
+            </select>
+          </div>
+          <p class="eyebrow">炉石传说 · 猜卡挑战</p>
+          <h1>炉石猜卡</h1>
+          <p id="snapshot-description" class="subtitle">标准模式：核心系列 + 当前 6 个标准拓展包（含迷你包）。</p>
+        </header>
+
+        <section class="instructions card">
+          <h2>规则</h2>
+          <ul>
+            <li>输入一张卡牌名称并提交竞猜。</li>
+            <li>系统会比对职业、稀有度、法力值、类型、所属系列、关键词。</li>
+            <li>当你确认答案是随从后，会额外显示种族列；确认答案是法术后，会额外显示派系列。</li>
+            <li>绿色表示命中；错误属性会显示为红色；法力值会给出 ↑ / ↓ 提示。</li>
+          </ul>
+        </section>
+
+        <section class="guess-panel card">
+          <div class="filter-bar" aria-label="建议筛选器">
+            <select id="snapshot-select" class="filter-select">
+              <option value="">加载版本中...</option>
+            </select>
+            <select id="filter-class" class="filter-select">
+              <option value="">全部职业</option>
+            </select>
+            <select id="filter-type" class="filter-select">
+              <option value="">全部类型</option>
+            </select>
+            <select id="filter-mana" class="filter-select">
+              <option value="">全部费用</option>
+            </select>
+            <select id="filter-series" class="filter-select">
+              <option value="">全部系列</option>
+            </select>
+            <select id="mode-select" class="filter-select">
+              <option value="easy">简单模式</option>
+              <option value="medium">中等模式</option>
+              <option value="hard">困难模式</option>
+            </select>
+            <button id="clear-filters" class="secondary filter-clear" type="button">清空筛选</button>
+          </div>
+          <div class="input-wrap">
+            <label class="sr-only" for="card-input">输入卡牌名称</label>
+            <input id="card-input" type="text" autocomplete="off" placeholder="例如：炎枪术 / 火球术 / 寒冬号角" />
+            <button id="guess-button" type="button">竞猜</button>
+          </div>
+          <div id="suggestion-preview" class="suggestion-preview hidden" aria-hidden="true">
+            <img id="suggestion-preview-image" class="suggestion-preview-image" alt="卡牌预览图" />
+          </div>
+          <div id="suggestions" class="suggestions" role="listbox" aria-label="卡牌建议"></div>
+          <div class="hint-bar">
+            <button id="hint-button" class="secondary" type="button">获取提示</button>
+            <div id="hint-list" class="hint-list"></div>
+          </div>
+          <p id="status-message" class="status-message" aria-live="polite"></p>
+          <div class="controls">
+             <div class="pill-group">
+                <span class="pill">模式: <strong id="mode-label">简单</strong></span>
+               <span class="pill">题库: <strong id="pool-size"></strong> 张</span>
+               <span class="pill">已猜: <strong id="guess-count">0</strong> 次</span>
+             </div>
+             <div class="action-group">
+               <button id="give-up-button" class="secondary" type="button">放弃看答案</button>
+               <button id="restart-button" class="secondary" type="button">重新开局</button>
+             </div>
+           </div>
+        </section>
+
+        <section class="history card">
+          <div class="history-header">
+            <h2>竞猜记录</h2>
+            <div class="legend">
+              <span><i class="legend-chip correct"></i> 命中</span>
+              <span><i class="legend-chip wrong"></i> 未命中</span>
+              <span><i class="legend-chip mana"></i> 法力方向提示</span>
+            </div>
+          </div>
+
+          <div class="table-head row">
+            <span>卡牌</span>
+            <span>职业</span>
+            <span>稀有度</span>
+            <span>法力值</span>
+            <span>类型</span>
+            <span>所属系列</span>
+            <span>关键词</span>
+          </div>
+          <div id="guess-history" class="guess-history"></div>
+          <div id="empty-state" class="empty-state">还没有竞猜，先来试一张卡牌。</div>
+        </section>
+
+        <div id="toast" class="toast hidden" aria-live="polite"></div>
+
+        <section id="win-banner" class="win-banner hidden" aria-live="polite">
+          <img id="win-card-image" class="win-card-image" alt="答案卡牌插图" />
+          <div>
+            <p id="result-label" class="win-label">胜利</p>
+            <h2 id="result-title">你猜中了！</h2>
+            <p id="win-message"></p>
+          </div>
+          <button id="play-again-button" type="button">再来一局</button>
+        </section>
+      </main>
+    </div>
+
+    <script type="module" src="./script.js"></script>
+  </body>
+</html>
